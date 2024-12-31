@@ -22,7 +22,7 @@ async function placeBet() {
 
     try {
         // Send a request to the backend API (this will be the Telegram bot)
-        const response = await fetch('/roulette', {  // Replace with actual URL
+        const response = await fetch('http://127.0.0.1:5000', {  // Replace with actual URL
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
