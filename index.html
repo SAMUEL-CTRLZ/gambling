@@ -3,72 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to New Vegas Casino</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #1b1b1b;
-            color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            background-color: #333;
-            padding: 20px;
-            font-size: 24px;
-        }
-        .button {
-            background-color: #ff9800;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            margin: 20px;
-            cursor: pointer;
-            font-size: 18px;
-            border-radius: 10px;
-        }
-        .button:hover {
-            background-color: #e68900;
-        }
-        .footer {
-            background-color: #333;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            color: #e6d8d8;
-            text-align: center;
-        }
-    </style>
+    <title>Web3 Casino - Main Menu</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-
-    <div class="header">
-        <h1>Welcome to New Vegas Casino</h1>
-        <p>Your source of fun and excitement!</p>
+    <div class="main-menu">
+        <h1>Welcome to the Web3 Casino</h1>
+        <p>Select a game to play:</p>
+        
+        <div class="game-buttons">
+            <a href="/roulette" class="game-button">Play Roulette</a>
+            <!-- Add other game links here (e.g., Blackjack, Slots) -->
+        </div>
     </div>
-
-    <div class="main-content">
-        <p>Choose a game to start playing:</p>
-        <button class="button" onclick="startGame()">Start Playing</button>
-    </div>
-
-    <div class="footer">
-        <p>&copy; 2024 New Vegas Casino</p>
-    </div>
-
-    <script>
-        function startGame() {
-            // Open the casino game page (replace this URL with your actual game URL)
-            window.location.href = "https://yourusername.github.io/web3-casino/game";
-        }
-
-        // Optional: Make the app full screen inside Telegram
-        if (window.Telegram) {
-            window.Telegram.WebApp.resize();
-        }
-    </script>
-
 </body>
 </html>
