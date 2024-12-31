@@ -69,3 +69,30 @@ async function checkBalance() {
 // Add event listeners to buttons
 betButton.addEventListener('click', placeBet);
 checkBalanceButton.addEventListener('click', checkBalance);
+
+document.getElementById('place-bet').addEventListener('click', function() {
+    const betNumber = parseInt(document.getElementById('bet').value);
+
+    if (isNaN(betNumber) || betNumber < 0 || betNumber > 36) {
+        alert("Please enter a valid number between 0 and 36.");
+        return;
+    }
+
+    // Add roulette spin animation
+    const wheel = document.getElementById('roulette-wheel');
+    wheel.style.transition = 'transform 2s ease-out';
+    wheel.style.transform = `rotate(${Math.random() * 360}deg)`; // Random rotation
+
+    setTimeout(function() {
+        // Simulate roulette result
+        const winningNumber = Math.floor(Math.random() * 37);
+        document.getElementById('result').innerHTML = `Winning Number: ${winningNumber}`;
+
+        // Display win/loss message
+        if (betNumber === winningNumber) {
+            alert('Congratulations! You win!');
+        } else {
+            alert('Sorry, you lost. Better luck next time!');
+        }
+    }, 2000); // Wait for animation to finish
+});
